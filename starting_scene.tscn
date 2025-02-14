@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xebi4uk4xow3"]
+
+[node name="starting_scene" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [0.0, 648.0]
+metadata/_edit_vertical_guides_ = [0.0, 1152.0, 576.0]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 120.0
+offset_right = 775.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 60
+text = "Name of game"
