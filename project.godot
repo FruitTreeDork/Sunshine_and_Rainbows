@@ -10,9 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Game_dev_proj"
+config/name="Sunshine_and_Rainbows"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [rendering]
 

@@ -1,6 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://xebi4uk4xow3"]
-
-[ext_resource type="Script" path="res://starting_scene.gd" id="1_n2f1j"]
+[gd_scene load_steps=5 format=3 uid="uid://byqowggjq6w03"]
 
 [sub_resource type="Animation" id="Animation_hj6qx"]
 resource_name = "fadeOut"
@@ -739,40 +737,16 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwv4y"]
 bg_color = Color(0.180392, 0.133333, 0.184314, 1)
 
-[node name="starting_scene" type="Node2D"]
-script = ExtResource("1_n2f1j")
-metadata/_edit_horizontal_guides_ = [0.0, 648.0]
-metadata/_edit_vertical_guides_ = [0.0, 1152.0, 576.0]
-
-[node name="buttons_and_ui" type="Node2D" parent="."]
-
-[node name="start_button" type="Button" parent="buttons_and_ui"]
-offset_left = 416.0
-offset_top = 368.0
-offset_right = 736.0
-offset_bottom = 488.0
-text = "Start"
-
-[node name="game_name_label" type="Label" parent="buttons_and_ui"]
-offset_left = 232.0
-offset_top = 120.0
-offset_right = 920.0
-offset_bottom = 203.0
-theme_override_font_sizes/font_size = 60
-text = "Sunshine and Rainbows"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="fade_anim" type="AnimationPlayer" parent="."]
+[node name="fade_anim" type="AnimationPlayer"]
 libraries = {
 "": SubResource("AnimationLibrary_44md6")
 }
 metadata/_edit_horizontal_guides_ = [648.0]
 metadata/_edit_vertical_guides_ = [1152.0, 0.0, 230.0, 460.0, 690.0, 920.0]
 
-[node name="all_panels" type="Node2D" parent="fade_anim"]
+[node name="all_panels" type="Node2D" parent="."]
 
-[node name="Panel" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = -2.0
 offset_top = -2.0
@@ -782,7 +756,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel2" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel2" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 227.0
 offset_top = -2.0
@@ -792,7 +766,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel3" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel3" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 458.0
 offset_top = -2.0
@@ -802,7 +776,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel4" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel4" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 689.0
 offset_top = -2.0
@@ -812,7 +786,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel5" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel5" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 921.0
 offset_top = -2.0
@@ -822,16 +796,17 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel6" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel6" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = -2.0
 offset_top = 231.0
 offset_right = 232.0
 offset_bottom = 467.0
+rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel7" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel7" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 227.0
 offset_top = 231.0
@@ -841,7 +816,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel8" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel8" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 458.0
 offset_top = 231.0
@@ -851,7 +826,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel9" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel9" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 689.0
 offset_top = 231.0
@@ -861,7 +836,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel10" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel10" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 921.0
 offset_top = 231.0
@@ -871,7 +846,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel11" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel11" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = -2.0
 offset_top = 463.0
@@ -881,7 +856,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel12" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel12" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 227.0
 offset_top = 463.0
@@ -891,7 +866,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel13" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel13" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 458.0
 offset_top = 463.0
@@ -901,7 +876,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel14" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel14" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 689.0
 offset_top = 463.0
@@ -911,7 +886,7 @@ rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
 
-[node name="Panel15" type="Panel" parent="fade_anim/all_panels"]
+[node name="Panel15" type="Panel" parent="all_panels"]
 modulate = Color(1, 1, 1, 0)
 offset_left = 921.0
 offset_top = 463.0
@@ -920,5 +895,3 @@ offset_bottom = 699.0
 rotation = 0.785398
 pivot_offset = Vector2(118, 118)
 theme_override_styles/panel = SubResource("StyleBoxFlat_jwv4y")
-
-[connection signal="pressed" from="buttons_and_ui/start_button" to="." method="_on_button_pressed"]
