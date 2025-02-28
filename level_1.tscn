@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt3084eyswaun"]
+
+[ext_resource type="Texture2D" uid="uid://j4jf2ybku6vy" path="res://art/tile_set/Sprite-marchmellow_ground.png" id="1_6cwo0"]
+[ext_resource type="PackedScene" uid="uid://dr5sej7ql8c1j" path="res://character.tscn" id="2_e5jn8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3652"]
+texture = ExtResource("1_6cwo0")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_q2jqc"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_k3652")
+
+[node name="Level_1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_q2jqc")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 11, 262145, 0, 1, 65537, 0, 2, 65537, 0, 3, 65537, 0, 4, 65537, 0, 5, 65537, 0, 6, 65537, 0, 7, 65537, 0, 8, 65537, 0, 9, 65537, 0, 10, 65537, 0, 65536, 1, 1, 65537, 65537, 1, 65538, 65537, 1, 65539, 65537, 1, 65540, 65537, 1, 65541, 131073, 1, 65542, 196609, 1, 65547, 262145, 1, 65545, 196609, 1, 65544, 65537, 1, 65543, 65537, 1, 65546, 65537, 1)
+
+[node name="character" parent="." instance=ExtResource("2_e5jn8")]
+position = Vector2(8, -16)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(288, -128)
+zoom = Vector2(2, 2)
